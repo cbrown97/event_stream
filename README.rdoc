@@ -1,0 +1,37 @@
+== README
+
+Goals:
+
+1) Complete the "feature" tests in spec/features/event_creation_spec.rb. There are two "scenario" blocks in that file.
+
+In the first one, you will need to use the Capybara DSL to fill in all the form fields in the new event form and submit
+it. You will then need to use the Capybara DSL to perform a test of the page to make sure the user is presented
+with the expected/correct page after form submission. There are various things you could look for in the page to
+ensure you get the response you need. You only need to pick one thing that you know will be present (a text message,
+or a DOM element unique to that page).
+
+In the second one, you need to use the Capybara DSL to submit the new event form with invalid or missing data. You will
+be testing to make sure the form is not sucessfully submitted. Instead, the form should be redisplayed along with one
+or more error messages.
+
+In order to complete these tasks you will need to add some validation code somewhere in the application that will
+inspect new Event objects and ensure the data they need is in place. It is up to you how to implement this validation
+code or where you put it, but there are some Rails mechanisms that make this easy and that is what you should aim for.
+
+
+2) Bonus features! If you complete the above, refactor the code to introduce a separate User model. Create an
+association between users and events so that each event is connected to a single user. Add an option-select form
+element for specifying the user the event belongs to in the views/events/_form.html.erb file.
+
+
+Hints:
+
+- There isn't a lot of code that you will need to add in order to complete the above goals. If you find
+yourself adding piles of code you are likely off track.
+
+- The tests you will be adding are called "feature specs" and are designed to use the capybara gem.
+
+- https://github.com/jnicklas/capybara#the-dsl
+
+
+
